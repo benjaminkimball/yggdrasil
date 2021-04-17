@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+
+BLUE='\033[0;34m'
+RESET='\033[0m'
+
+echo
+echo
+printf "${BLUE}$(cat bin/signature.txt)${RESET}"
+echo
+echo
+echo "============================================================"
+echo "> Inspecting background services..."
+echo
+
+docker compose ps --all
