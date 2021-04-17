@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+
+GREEN='\033[0;32m'
+RESET='\033[0m'
+
+echo
+echo
+printf "${GREEN}$(cat bin/signature.txt)${RESET}"
+echo
+echo
+echo "============================================================"
+echo "> Starting background services..."
+echo
+
+docker compose up --detach --remove-orphans

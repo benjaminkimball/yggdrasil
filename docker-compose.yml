@@ -1,0 +1,26 @@
+version: "3.9"
+services:
+  localstack:
+    image: localstack/localstack
+    restart: always
+    ports:
+      - "4566:4566"
+      - "4571:4571"
+  memcached:
+    image: memcached:1.6.9-alpine
+    restart: always
+    ports:
+      - "11211:11211"
+  postgres:
+    image: postgres:12.6-alpine
+    restart: always
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+    ports:
+      - "5432:5432"
+  redis:
+    image: redis:6.2.1-alpine
+    restart: always
+    ports:
+      - "6379:6379"

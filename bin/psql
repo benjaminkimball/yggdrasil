@@ -1,0 +1,21 @@
+#!/usr/bin/env bash
+
+BLUE='\033[0;34m'
+RESET='\033[0m'
+
+POSTGRES_HOST=postgres
+POSTGRES_USER=postgres
+POSTGRES_PASS=postgres
+
+CONTAINER=`docker ps | grep -Eo '\w+_postgres_\d+'`
+
+echo
+echo
+printf "${BLUE}$(cat bin/signature.txt)${RESET}"
+echo
+echo
+echo "============================================================"
+echo "> Connecting to $CONTAINER..."
+echo
+
+docker exec -it --env PGPASSWORD=$POSTGRES_PASS $CONTAINER psql -h $POSTGRES_HOST -U $POSTGRES_USER
