@@ -12,4 +12,4 @@ echo "============================================================"
 echo "> Inspecting background services..."
 echo
 
-docker compose ps --all
+docker compose ps -a

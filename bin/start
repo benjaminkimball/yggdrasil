@@ -12,4 +12,4 @@ echo "============================================================"
 echo "> Starting background services..."
 echo
 
-docker compose up --detach --remove-orphans
+docker compose up -d --remove-orphans
