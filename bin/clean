@@ -9,7 +9,7 @@ printf "${BLUE}$(cat bin/signature.txt)${RESET}"
 echo
 echo
 echo "============================================================"
-echo "> Cleaning up background services artifacts..."
+echo "> Cleaning up background service artifacts..."
 echo
 
 docker volume rm $(docker volume ls -q)
