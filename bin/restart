@@ -9,8 +9,8 @@ printf "${BLUE}$(cat bin/signature.txt)${RESET}"
 echo
 echo
 echo "============================================================"
-echo "> Cleaning up background service artifacts..."
+echo "> Restarting background services..."
 echo
 
-docker rmi $(docker images -q)
-docker volume rm $(docker volume ls -q)
+docker compose down --remove-orphans
+docker compose up -d --remove-orphans
