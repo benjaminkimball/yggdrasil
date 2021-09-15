@@ -3,6 +3,7 @@
 ### Main Commands
 
 - `bin/clean`
+- `bin/restart`
 - `bin/start`
 - `bin/status`
 - `bin/stop`
