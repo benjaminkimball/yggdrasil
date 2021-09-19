@@ -7,7 +7,7 @@ CONTAINER=`docker ps | grep -Eo '\w+_redis_\d+'`
 
 echo
 echo
-printf "${BLUE}$(cat bin/signature.txt)${RESET}"
+printf "${BLUE}$(cat signature.txt)${RESET}"
 echo
 echo
 echo "============================================================"

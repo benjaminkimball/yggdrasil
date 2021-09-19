@@ -5,7 +5,7 @@ RESET='\033[0m'
 
 echo
 echo
-printf "${RED}$(cat bin/signature.txt)${RESET}"
+printf "${RED}$(cat signature.txt)${RESET}"
 echo
 echo
 echo "============================================================"
