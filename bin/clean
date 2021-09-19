@@ -12,5 +12,5 @@ echo "============================================================"
 echo "> Cleaning up background service artifacts..."
 echo
 
-docker rmi $(docker images -q)
+# docker rmi $(docker images -q)
 docker volume rm $(docker volume ls -q)
