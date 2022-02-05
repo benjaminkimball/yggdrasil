@@ -1,6 +1,6 @@
 # yggdrasil :rainbow:
 
-Consolidated tooling for emulating AWS-like services locally.
+Consolidated tooling for running persistence services locally.
 
 ### Main `make` commands
 
