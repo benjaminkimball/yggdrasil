@@ -1,13 +1,6 @@
 #!/usr/bin/env bash
 
-GREEN='\033[0;32m'
-RESET='\033[0m'
-
-echo
-echo
-printf "${GREEN}$(cat signature.txt)${RESET}"
-echo
-echo
+source ./bin/signature
 echo "============================================================"
 echo "> Starting background services..."
 echo
