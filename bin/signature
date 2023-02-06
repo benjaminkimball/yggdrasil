@@ -16,6 +16,5 @@ printf "${GREEN}▐     █   █    ▀▄▄  █    ▀▄▄ ▐ █    █ 
 printf "${CYAN}      █   █     █ █ █     █ █  █    █  ▄▀    █   ▄▀   █ ▀▄   █      █        █${RESET}\n"
 printf "${BLUE}    ▄▀    ▐▀▄▄▄▄▀ ▐ ▐▀▄▄▄▄▀ ▐ ▄▀▄▄▄▄▀ █     █   █   ▄▀   █▀▀▀    ▄▀▀▀▀▀▄   ▄▀▄▄▄▄▄▄▀${RESET}\n"
 printf "${MAGENTA}    █     ▐         ▐        █     ▐  ▐     ▐   ▐   ▐    ▐      █       █  █${RESET}\n"
-printf "${GREEN}    ▐                        ▐                                  ▐       ▐  ▐${RESET}\n"
-echo
+printf "${MAGENTA}    ▐                        ▐                                  ▐       ▐  ▐${RESET}\n"
 echo
