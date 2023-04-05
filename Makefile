@@ -1,6 +1,3 @@
-clean:
-	@bin/clean
-
 psql:
 	@bin/psql
 

@@ -4,7 +4,6 @@ Consolidated tooling for running persistence services locally.
 
 ### Main `make` commands
 
-- `clean` &mdash; Removes orphaned volumes
 - `restart` &mdash; Stops and starts all services
 - `start` &mdash; Starts all services
 - `status` &mdash; Displays status of running services
