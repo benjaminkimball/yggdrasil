@@ -1,3 +1,5 @@
+down: stop
+
 psql:
 	@bin/psql
 
@@ -14,3 +16,5 @@ status:
 
 stop:
 	@bin/stop
+
+up: start
