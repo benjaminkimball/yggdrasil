@@ -7,6 +7,7 @@ Consolidated tooling for running persistence services locally.
 - `start` &mdash; Starts all services
 - `stop` &mdash; Stops all services
 - `status` &mdash; Displays status of running services
+- `logs` &mdash; Tails running service logs
 
 #### Helpful aliases
 

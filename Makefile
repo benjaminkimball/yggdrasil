@@ -8,6 +8,9 @@ stop:
 status:
 	@bin/status
 
+logs:
+	@bin/logs
+
 # Helpful aliases
 up: start
 down: stop
