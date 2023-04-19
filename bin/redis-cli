@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 
-CONTAINER=`docker ps | grep -Eo '\w+-redis-\d+'`
+CURRENT_DIR=`basename $(pwd)`
+CONTAINER=`docker ps --filter name="$CURRENT_DIR-redis" --format "{{.Names}}"`
 
 source ./bin/signature
 echo "============================================================"
