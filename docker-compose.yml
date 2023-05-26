@@ -1,10 +1,16 @@
 version: "3.9"
 services:
+  neo4j:
+    image: neo4j:5.8.0-community
+    restart: always
+    ports:
+      - 7474:7474
+      - 7687:7687
   postgres:
     image: postgres:15.3-alpine
     restart: always
     ports:
-      - "5432:5432"
+      - 5432:5432
     environment:
       POSTGRES_USER: postgres
       POSTGRES_PASSWORD: postgres
@@ -12,4 +18,4 @@ services:
     image: redis:7.0.11-alpine
     restart: always
     ports:
-      - "6379:6379"
+      - 6379:6379
