@@ -1,7 +1,7 @@
-version: "3.9"
+version: "3.8"
 services:
   postgres:
-    image: postgres:15.5-alpine
+    image: postgres:16.2-alpine
     restart: always
     ports:
       - 5432:5432
@@ -9,7 +9,7 @@ services:
       POSTGRES_USER: postgres
       POSTGRES_PASSWORD: postgres
   redis:
-    image: redis:7.0.14-alpine
+    image: redis:7.0.15-alpine
     restart: always
     ports:
       - 6379:6379
