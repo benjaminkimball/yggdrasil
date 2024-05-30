@@ -2,7 +2,7 @@
 
 source ./bin/signature
 echo "============================================================"
-echo "> Clearing any conflicting background services..."
+echo "> Stopping services using conflicting ports..."
 echo
 
 for id in $(docker ps -q)
@@ -12,7 +12,7 @@ do
   if [[ $PORT == *"5432"* ]] || [[ $PORT == *"6379"* ]]; then
     CONTAINER=$(docker ps --filter id="${id}" --format "{{.Names}}")
 
-    echo "> Stopping and removing container ${CONTAINER}..."
+    echo "> Stopping ${CONTAINER}..."
 
     docker stop "${id}" > /dev/null
     docker rm -v "${id}" > /dev/null
