@@ -1,4 +1,7 @@
 # Main commands
+clear:
+	@bin/clear
+
 start:
 	@bin/start
 

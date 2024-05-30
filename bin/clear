@@ -1,0 +1,20 @@
+#!/usr/bin/env bash
+
+source ./bin/signature
+echo "============================================================"
+echo "> Clearing any conflicting background services..."
+echo
+
+for id in $(docker ps -q)
+do
+  CONTAINER=$(docker ps --filter id="${id}" --format "{{.Names}}")
+  PORT=$(docker port "${id}")
+
+  if [[ $PORT == *"5432"* ]] || [[ $PORT == *"6379"* ]]; then
+    echo "> Stopping and removing container ${CONTAINER}..."
+    docker stop "${id}" > /dev/null
+    docker rm -v "${id}" > /dev/null
+    echo "> Done!"
+    echo
+  fi
+done
