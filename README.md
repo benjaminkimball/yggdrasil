@@ -5,6 +5,7 @@ Consolidated tooling for running persistence services locally.
 ### Main `make` commands
 
 - `clear` &mdash; Stops services using conflicting ports
+- `restart` &mdash; Stops and starts all services
 - `start` &mdash; Starts all services
 - `stop` &mdash; Stops all services
 - `status` &mdash; Displays status of running services
@@ -14,7 +15,7 @@ Consolidated tooling for running persistence services locally.
 
 - `up` &mdash; Alias for the `start` command
 - `down` &mdash; Alias for the `stop` command
-- `restart` &mdash; Alias to `stop` and `start` all services
+- `reset` &mdash; Alias for the `restart` command
 
 ### Service-specific `make` commands
 

@@ -1,6 +1,11 @@
 #!/usr/bin/env bash
 
-source ./bin/signature
+if [[ $* == *--no-signature* ]]; then
+  echo
+else
+  source ./bin/signature
+fi
+
 echo "============================================================"
 echo "> Tailing background service logs..."
 echo

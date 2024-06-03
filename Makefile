@@ -2,6 +2,10 @@
 clear:
 	@bin/clear
 
+restart:
+	@bin/stop
+	@bin/start --no-signature
+
 start:
 	@bin/start
 
@@ -17,7 +21,7 @@ logs:
 # Helpful aliases
 up: start
 down: stop
-restart: stop start
+reset: restart
 
 # Service-specific commands
 psql:
