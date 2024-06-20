@@ -2,6 +2,9 @@
 clear:
 	@bin/clear
 
+logs:
+	@bin/logs
+
 restart:
 	@bin/stop
 	@bin/start --no-signature
@@ -9,18 +12,15 @@ restart:
 start:
 	@bin/start
 
-stop:
-	@bin/stop
-
 status:
 	@bin/status
 
-logs:
-	@bin/logs
+stop:
+	@bin/stop
 
 # Helpful aliases
-up: start
 down: stop
+up: start
 reset: restart
 
 # Service-specific commands

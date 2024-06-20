@@ -3,12 +3,9 @@
 CURRENT_DIR=`basename $(pwd)`
 CONTAINER=`docker ps --filter name="$CURRENT_DIR-redis" --format "{{.Names}}"`
 
-if [[ $* == *--no-signature* ]]; then
-  echo
-else
-  source ./bin/signature
-fi
+source ./bin/signature
 
+print_signature $*
 echo "============================================================"
 echo "> Connecting to $CONTAINER..."
 echo

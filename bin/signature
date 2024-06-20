@@ -8,13 +8,19 @@ BLUE='\033[0;34m'
 MAGENTA='\033[0;35m'
 RESET='\033[0m'
 
-echo
-echo
-printf "${RED}▄▀▀▄ ▀▀▄  ▄▀▀▀▀▄    ▄▀▀▀▀▄   ▄▀▀█▄▄   ▄▀▀▄▀▀▀▄  ▄▀▀█▄   ▄▀▀▀▀▄  ▄▀▀█▀▄   ▄▀▀▀▀▄${RESET}\n"
-printf "${YELLOW}█   ▀▄ ▄▀ █         █        █ ▄▀   █ █   █   █ ▐ ▄▀ ▀▄ █ █   ▐ █   █  █ █    █${RESET}\n"
-printf "${GREEN}▐     █   █    ▀▄▄  █    ▀▄▄ ▐ █    █ ▐  █▀▀█▀    █▄▄▄█    ▀▄   ▐   █  ▐ ▐    █${RESET}\n"
-printf "${CYAN}      █   █     █ █ █     █ █  █    █  ▄▀    █   ▄▀   █ ▀▄   █      █        █${RESET}\n"
-printf "${BLUE}    ▄▀    ▐▀▄▄▄▄▀ ▐ ▐▀▄▄▄▄▀ ▐ ▄▀▄▄▄▄▀ █     █   █   ▄▀   █▀▀▀    ▄▀▀▀▀▀▄   ▄▀▄▄▄▄▄▄▀${RESET}\n"
-printf "${MAGENTA}    █     ▐         ▐        █     ▐  ▐     ▐   ▐   ▐    ▐      █       █  █${RESET}\n"
-printf "${MAGENTA}    ▐                        ▐                                  ▐       ▐  ▐${RESET}\n"
-echo
+print_signature() {
+  if [[ $* != *--no-signature* ]]; then
+    echo
+    echo
+    printf "${RED}▄▀▀▄ ▀▀▄  ▄▀▀▀▀▄    ▄▀▀▀▀▄   ▄▀▀█▄▄   ▄▀▀▄▀▀▀▄  ▄▀▀█▄   ▄▀▀▀▀▄  ▄▀▀█▀▄   ▄▀▀▀▀▄\n"
+    printf "${YELLOW}█   ▀▄ ▄▀ █         █        █ ▄▀   █ █   █   █ ▐ ▄▀ ▀▄ █ █   ▐ █   █  █ █    █\n"
+    printf "${GREEN}▐     █   █    ▀▄▄  █    ▀▄▄ ▐ █    █ ▐  █▀▀█▀    █▄▄▄█    ▀▄   ▐   █  ▐ ▐    █\n"
+    printf "${CYAN}      █   █     █ █ █     █ █  █    █  ▄▀    █   ▄▀   █ ▀▄   █      █        █\n"
+    printf "${BLUE}    ▄▀    ▐▀▄▄▄▄▀ ▐ ▐▀▄▄▄▄▀ ▐ ▄▀▄▄▄▄▀ █     █   █   ▄▀   █▀▀▀    ▄▀▀▀▀▀▄   ▄▀▄▄▄▄▄▄▀\n"
+    printf "${MAGENTA}    █     ▐         ▐        █     ▐  ▐     ▐   ▐   ▐    ▐      █       █  █\n"
+    printf "${MAGENTA}    ▐                        ▐                                  ▐       ▐  ▐${RESET}\n"
+    echo
+  else
+    echo
+  fi
+}

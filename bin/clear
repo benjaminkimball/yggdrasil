@@ -1,11 +1,8 @@
 #!/usr/bin/env bash
 
-if [[ $* == *--no-signature* ]]; then
-  echo
-else
-  source ./bin/signature
-fi
+source ./bin/signature
 
+print_signature $*
 echo "============================================================"
 echo "> Stopping services using conflicting ports..."
 echo
