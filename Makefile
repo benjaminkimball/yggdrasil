@@ -1,7 +1,4 @@
 # Main commands
-clear:
-	@bin/clear
-
 logs:
 	@bin/logs
 
