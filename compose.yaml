@@ -1,12 +1,12 @@
 services:
   localstack:
-    image: localstack/localstack:3.8.1
+    image: localstack/localstack:4.0.3
     restart: always
     ports:
       - 4566:4566
       - 4510-4559:4510-4559
   postgres:
-    image: postgres:16.4-alpine
+    image: postgres:17.2-alpine
     restart: always
     ports:
       - 5432:5432
