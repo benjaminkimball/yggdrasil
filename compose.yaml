@@ -1,11 +1,13 @@
 services:
   localstack:
+    container_name: localstack
     image: localstack/localstack:4.0.3
     restart: always
     ports:
       - 4566:4566
       - 4510-4559:4510-4559
   postgres:
+    container_name: postgres
     image: postgres:17.2-alpine
     restart: always
     ports:
@@ -14,6 +16,7 @@ services:
       POSTGRES_USER: postgres
       POSTGRES_PASSWORD: postgres
   redis:
+    container_name: redis
     image: redis:7.2.6-alpine
     restart: always
     ports:
