@@ -7,4 +7,4 @@ echo "============================================================"
 echo "> Inspecting background services..."
 echo
 
-docker compose ps -a
+docker compose ps -a --format 'table {{.Name}}\t{{.Image}}\t{{.Service}}\t{{.Status}}'
