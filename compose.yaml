@@ -1,7 +1,7 @@
 services:
   localstack:
     container_name: localstack
-    image: localstack/localstack:4.10.0
+    image: localstack/localstack:4.13.1
     restart: always
     ports:
       - 4566:4566
@@ -15,9 +15,22 @@ services:
     environment:
       POSTGRES_USER: postgres
       POSTGRES_PASSWORD: postgres
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres"]
+      interval: 2s
+      timeout: 15s
+      retries: 5
+  postgres-setup:
+    container_name: postgres-setup
+    image: postgres:18.1-alpine
+    command: >
+      sh -c 'for db in (); do PGPASSWORD=postgres psql -h postgres -U postgres -c "CREATE DATABASE $$db;"; done'
+    depends_on:
+      postgres:
+        condition: service_healthy
   redis:
     container_name: redis
-    image: redis:8.2.3-alpine
+    image: redis:8.4.0-alpine
     restart: always
     ports:
       - 6379:6379
